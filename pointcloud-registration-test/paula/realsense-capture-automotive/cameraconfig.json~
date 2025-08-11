@@ -1,0 +1,179 @@
+{
+  "camera": [
+    {
+      "serial": "215122252639",
+      "trafo": [
+        [
+          -0.13528187348412013,
+          0.9887763822279805,
+          0.06340410597725554,
+          -0.3168532427713382
+        ],
+        [
+          0.9907828490209993,
+          0.135449500957323,
+          0.0016669661798502232,
+          1.2212585048886964
+        ],
+        [
+          -0.006939797724655805,
+          0.06304521106761957,
+          -0.9979865432805106,
+          1.7925552137841974
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense"
+    },
+    {
+      "serial": "231622302462",
+      "trafo": [
+        [
+          -0.02098245837418169,
+          0.49175782923511446,
+          -0.8704791633500163,
+          1.5993017480006464
+        ],
+        [
+          0.9995257710901572,
+          -0.009309716168115954,
+          -0.02935237829371799,
+          1.2240012226060997
+        ],
+        [
+          -0.02253817577365434,
+          -0.87068224202107,
+          -0.491329282723876,
+          0.7381277998092474
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense"
+    },
+    {
+      "serial": "215122251054",
+      "trafo": [
+        [
+          0.09125380713875338,
+          -0.4339604365510944,
+          0.8962985452353843,
+          -1.6794395998272051
+        ],
+        [
+          0.9953217061705705,
+          0.011058620904294473,
+          -0.09598129051747034,
+          1.2726076689752444
+        ],
+        [
+          0.0317402569048701,
+          0.9008640554556928,
+          0.43293938337778193,
+          -0.648068150920806
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense"
+    },
+    {
+      "serial": "215122252692",
+      "trafo": [
+        [
+          0.02365583725761174,
+          -0.998898743264589,
+          -0.040517922800488826,
+          0.13008484261615583
+        ],
+        [
+          0.995140117102945,
+          0.02740320052750731,
+          -0.09457913053727401,
+          1.2834451794701325
+        ],
+        [
+          0.09558529539620035,
+          -0.03808366192049034,
+          0.9946924579983236,
+          -1.706398887945885
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense"
+    }
+  ],
+  "filtering": {
+    "decimation_magnitude": 1,
+    "do_decimation": false,
+    "do_hole_filling": false,
+    "do_spatial": true,
+    "do_temporal": false,
+    "do_threshold": true,
+    "hole_filling_mode": 0,
+    "map_color_to_depth": 1,
+    "spatial_holes_fill": 0,
+    "spatial_magnitude": 2,
+    "spatial_smooth_alpha": 0.5,
+    "spatial_smooth_delta": 20,
+    "temporal_persistency": 3,
+    "temporal_smooth_alpha": 0.4000000059604645,
+    "temporal_smooth_delta": 20,
+    "threshold_max_distance": 4.0,
+    "threshold_min_distance": 0.15000000596046448
+  },
+  "hardware": {
+    "backlight_compensation": 0,
+    "color_exposure": 156,
+    "color_gain": 64,
+    "color_height": 720,
+    "color_width": 1280,
+    "depth_exposure": -33000,
+    "depth_gain": 16,
+    "depth_height": 480,
+    "depth_width": 848,
+    "fps": 30,
+    "laser_power": 150,
+    "visual_preset": 0,
+    "whitebalance": 4600
+  },
+  "processing": {
+    "depth_x_erosion": 0,
+    "depth_y_erosion": 0,
+    "greenscreen_removal": false,
+    "height_max": 2.2,
+    "height_min": 0.0,
+    "radius_filter": 1.1
+  },
+  "sync": {
+    "sync_master_serial": "215122252639",
+    "sync_mode": 2
+  },
+  "system": {
+    "debug": false,
+    "new_timestamps": false,
+    "playback_realtime": false,
+    "prefer_color_timing": true,
+    "record_to_directory": ""
+  },
+  "type": "realsense",
+  "version": 4
+}
