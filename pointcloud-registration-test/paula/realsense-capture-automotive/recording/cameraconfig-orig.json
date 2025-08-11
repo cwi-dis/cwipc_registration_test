@@ -164,7 +164,7 @@
     "depth_y_erosion": 0,
     "greenscreen_removal": false,
     "height_max": 2.2,
-    "height_min": -0.1,
+    "height_min": 0.0,
     "radius_filter": 1.1
   },
   "sync": {
