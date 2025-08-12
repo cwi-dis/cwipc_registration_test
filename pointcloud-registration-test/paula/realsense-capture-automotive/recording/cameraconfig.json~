@@ -1,6 +1,7 @@
 {
   "camera": [
     {
+      "playback_inpoint_micros": 0,
       "serial": "215122252639",
       "trafo": [
         [
@@ -28,9 +29,10 @@
           1.0
         ]
       ],
-      "type": "realsense"
+      "type": "realsense_playback"
     },
     {
+      "playback_inpoint_micros": 0,
       "serial": "231622302462",
       "trafo": [
         [
@@ -58,9 +60,10 @@
           1.0
         ]
       ],
-      "type": "realsense"
+      "type": "realsense_playback"
     },
     {
+      "playback_inpoint_micros": 0,
       "serial": "215122251054",
       "trafo": [
         [
@@ -88,9 +91,10 @@
           1.0
         ]
       ],
-      "type": "realsense"
+      "type": "realsense_playback"
     },
     {
+      "playback_inpoint_micros": 0,
       "serial": "215122252692",
       "trafo": [
         [
@@ -118,7 +122,7 @@
           1.0
         ]
       ],
-      "type": "realsense"
+      "type": "realsense_playback"
     }
   ],
   "filtering": {
@@ -160,7 +164,7 @@
     "depth_y_erosion": 0,
     "greenscreen_removal": false,
     "height_max": 2.2,
-    "height_min": 0.0,
+    "height_min": -0.1,
     "radius_filter": 1.1
   },
   "sync": {
@@ -175,6 +179,5 @@
     "record_to_directory": ""
   },
   "type": "realsense_playback",
-  "version": 4,
-  "correspondence": 0.007738604043378151
+  "version": 4
 }
