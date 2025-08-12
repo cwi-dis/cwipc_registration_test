@@ -52,7 +52,7 @@
   ```
   > Note that the `q=70` is a magic number: it was determined by looking at the graph for another method, and then seeing approximately the percentage of points we expect to overlap between each camera and all other cameras.
   
-  Results are in `paula-flooraligned-q90.png`, and we are going to use the per-tile correspondences in the next step.
+  Results are in `paula-flooraligned-q70.png`, and we are going to use the per-tile correspondences in the next step.
   
   Actually, I didn't: I used interactive but accepted all the choices.
   
@@ -81,3 +81,13 @@
 -  **Brainwave**: the problem is that for Point2Plane it does not take into account the direction of the plane! So "paula front" points and "paula back" points should be very difficult to match, but in stead they are very easy to match.
 
   Need to inspect the "normal invention" algorithm. If we can have another one (for example based on the centroid of the per-camera point cloud) we should be getting much better results.
+- While setting out to implement this I realised I made a serious operator error: I always selected `no` for accepting the alignment results. Also, there was a bug in the code so while using `cwipc_test_aligner` it probably used point2point in stead of point2plane as the algorithm.
+
+  Trying again, now non-interactive.
+- First let's try non-interactive with a correspondence of `0.035` (which is the maximum gleaned from `paula-flooraligned-q70.png`:
+  ```
+  python -m cwipc.scripts.cwipc_test_aligner --correspondence 0.035 paula-flooraligned.ply paula-flooraligned-035.ply
+  ```
+  
+  This clearly shows that we need a better normal estimation: it now managed to match paula's front and back to a much finer level:-)
+  
