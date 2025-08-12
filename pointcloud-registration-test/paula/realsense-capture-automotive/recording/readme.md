@@ -90,4 +90,24 @@
   ```
   
   This clearly shows that we need a better normal estimation: it now managed to match paula's front and back to a much finer level:-)
+- Fixed `RegistrationComputer_ICP_Point2Plane` to estimate normal direction by looking at the centers of the source and terget point cloud to align.
+- Ran
+  ```
+  python -m cwipc.scripts.cwipc_test_aligner --correspondence 0.035 --verbose paula-flooraligned.ply paula-flooraligned-normal035.ply
+  ```
+  It makes no difference whatsoever!
   
+  So maybe we need to try GeneralizedICP in stead of PointToPlane.
+  
+- Implemented that, and ran
+  ```
+  python -m cwipc.scripts.cwipc_test_aligner --correspondence 0.035 --verbose --algorithm_fine RegistrationComputer_ICP_Generalized paula-flooraligned.ply paula-flooraligned-generalized035.ply
+  ```
+  Tiles are pairwise-aligned pretty nicely. But overall there is a huge error.
+- Realized that the `70%` is toolarge an overlap for some of these camera-pairs. 
+
+  Let's try the max-correspondence of `0.0133` that comes out of there:
+  ```
+    python -m cwipc.scripts.cwipc_test_aligner --correspondence 0.0133 --verbose --algorithm_fine RegistrationComputer_ICP_Generalized paula-flooraligned.ply paula-flooraligned-generalized0133.ply
+  ```
+  Very similar results. Sigh.
