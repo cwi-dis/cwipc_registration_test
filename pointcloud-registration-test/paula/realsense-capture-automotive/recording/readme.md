@@ -1,3 +1,5 @@
+> Note: some of these instructions are wrong, as found out when doing `recording2`.
+
 ### Initial capture, align to floor
 
 - Use `cameraconfig-orig.json`, but with floor added.
@@ -27,10 +29,10 @@
   
 - Run
   ```
-  python -m cwipc.scripts.cwipc_find_transform --output paula-miraco-aligned.ply --correspondence 0.24 --plot ../../paula-miraco.ply paula-flooraligned.ply
+  python -m cwipc.scripts.cwipc_find_transform --correspondence 0.24 --plot paula-flooraligned.ply ../../paula-miraco.ply
   ```
   Plot alignment to `paula-to-miraco-aligned-pre.png`
-- Test whether we can use this ground truth `paula-miraco-aligned.ply` to lign the individual tiles. Run
+- Test whether we can use this ground truth `paula-miraco-aligned.ply` to align the individual tiles. Run
   ```
   python -m cwipc.scripts.cwipc_test_aligner --togroundtruth paula-miraco-aligned.ply --correspondence 0.071 --plot paula-flooraligned.ply paula-flooraligned-miracoaligned.ply
   ```

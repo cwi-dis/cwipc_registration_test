@@ -12,3 +12,31 @@
 - Capture `paula-flooraligned.ply`
 - Keep config as `cameraconfig-afterflooralign.json`
 
+### Check whether we can align to ground truth
+
+- Run
+  ```
+  python -m cwipc.scripts.cwipc_analyze_registration --method q=95 --plot --togroundtruth paula-flooraligned.ply ../../paula-miraco.ply
+  ```
+  Plot alignment to `paula-miraco-to-flooraligned.png`
+- Run 
+  ```
+  python -m cwipc.scripts.cwipc_find_transform --output paula-miraco-aligned.ply --correspondence 0.16 --plot ../../paula-miraco.ply paula-flooraligned.ply
+  ```
+  Plot alignment to `paula-miraco-aligned.png`
+- Run
+  ```
+  python -m cwipc.scripts.cwipc_analyze_registration --method q=90 --plot --togroundtruth paula-miraco-aligned.ply paula-flooraligned.ply
+  ```
+  Plot alignment to `paula-to-miraco-aligned-pre.png`.
+  Worst correspondence was camera 1 with `0.044`.
+- Test whether we can use this ground truth `paula-miraco-aligned.ply` to align the individual tiles. Run
+  ```
+  python -m cwipc.scripts.cwipc_test_aligner --togroundtruth paula-miraco-aligned.ply --correspondence 0.044 --plot paula-flooraligned.ply paula-flooraligned-miracoaligned.ply
+  ```
+  Plot alignment to `paula-to-miraco-aligned-post.png`.
+  There is a gap on her left.
+- Tried various things to get rid of the gap (like upping the correspondence, or repeating the ground-truth registration). Nothing worked. Maybe I accidntally moved paula's arm, so the ground truth isn't an actual ground truth?
+
+
+
