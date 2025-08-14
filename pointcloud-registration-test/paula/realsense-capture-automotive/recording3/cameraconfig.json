@@ -1,0 +1,180 @@
+{
+  "camera": [
+    {
+      "serial": "215122252639",
+      "trafo": [
+        [
+          0.06323330952475158,
+          0.9979712736849541,
+          -0.0074084725945844955,
+          0.028045742473886984
+        ],
+        [
+          0.9977764429245097,
+          -0.06337416404674133,
+          -0.020636988062565007,
+          1.27987128384718
+        ],
+        [
+          -0.021064627019363735,
+          -0.006087054379107221,
+          -0.9997595857292545,
+          1.7673874193974755
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense_playback"
+    },
+    {
+      "serial": "231622302462",
+      "trafo": [
+        [
+          -0.02098245837418169,
+          0.49175782923511446,
+          -0.8704791633500163,
+          1.5993017480006464
+        ],
+        [
+          0.9995257710901572,
+          -0.009309716168115954,
+          -0.02935237829371799,
+          1.2240012226060997
+        ],
+        [
+          -0.02253817577365434,
+          -0.87068224202107,
+          -0.491329282723876,
+          0.7381277998092474
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense_playback"
+    },
+    {
+      "serial": "215122251054",
+      "trafo": [
+        [
+          0.17065400564923452,
+          -0.41474921377873375,
+          0.8937898522727818,
+          -1.5337677959773692
+        ],
+        [
+          0.9838904780283977,
+          0.022695181498962883,
+          -0.17732584690842298,
+          1.403953524344215
+        ],
+        [
+          0.053261032668654375,
+          0.909652691089657,
+          0.4119408258383925,
+          -0.5345028479933407
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense_playback"
+    },
+    {
+      "serial": "215122252692",
+      "trafo": [
+        [
+          0.056187777394828754,
+          -0.9971068334820659,
+          -0.051194690103654586,
+          0.227900311860956
+        ],
+        [
+          0.9917630010394372,
+          0.061651121376392566,
+          -0.11227327822012564,
+          1.298199514187679
+        ],
+        [
+          0.11510466298412407,
+          -0.04446461353046923,
+          0.9923577050151364,
+          -1.6448556377480599
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "realsense_playback"
+    }
+  ],
+  "filtering": {
+    "decimation_magnitude": 1,
+    "do_decimation": false,
+    "do_hole_filling": false,
+    "do_spatial": true,
+    "do_temporal": false,
+    "do_threshold": true,
+    "hole_filling_mode": 0,
+    "map_color_to_depth": 1,
+    "spatial_holes_fill": 0,
+    "spatial_magnitude": 2,
+    "spatial_smooth_alpha": 0.5,
+    "spatial_smooth_delta": 20,
+    "temporal_persistency": 3,
+    "temporal_smooth_alpha": 0.4000000059604645,
+    "temporal_smooth_delta": 20,
+    "threshold_max_distance": 4.0,
+    "threshold_min_distance": 0.15000000596046448
+  },
+  "hardware": {
+    "backlight_compensation": 0,
+    "color_exposure": 156,
+    "color_gain": 64,
+    "color_height": 720,
+    "color_width": 1280,
+    "depth_exposure": -33000,
+    "depth_gain": 16,
+    "depth_height": 480,
+    "depth_width": 848,
+    "fps": 30,
+    "laser_power": 150,
+    "visual_preset": 0,
+    "whitebalance": 4600
+  },
+  "processing": {
+    "depth_x_erosion": 0,
+    "depth_y_erosion": 0,
+    "greenscreen_removal": false,
+    "height_max": 2.2,
+    "height_min": 0.0,
+    "radius_filter": 1.1
+  },
+  "sync": {
+    "sync_master_serial": "215122252639",
+    "sync_mode": 2
+  },
+  "system": {
+    "debug": false,
+    "new_timestamps": false,
+    "playback_realtime": false,
+    "prefer_color_timing": true,
+    "record_to_directory": ""
+  },
+  "type": "realsense_playback",
+  "version": 4,
+  "correspondence": 0.007738604043378151
+}
