@@ -46,4 +46,8 @@ Let's  a completely different angle. We have the good calibration from `../../..
 - Analyze alignment for `mean`, both with floor and with `--ignorefloor`.
   - Results are similarly-shaped as for the boxes.
   - I have the impression (_need to verify_) that for most tiles it holds that `mode < mean-stddev`. Maybe not for camera 1, but it has a very large `mean`, and also its `mode` is the "second peak". We may be able to detect this.
-
+  - Note that the max correspondence value that worked well for the boxes `0.034` (being the worst `mean+stddev`) cannot be gleamed from these plots. That number, for this plot, would be `0.044`.
+- Now we copy the fully aligned cameraconfig (and also to `cameraconfig-03.json`) and capture `03-paula-boxregistration.ply`
+  - Interesting... We still have the gap in her left side that we saw when aligning to the ground truth... Makes me wonder whether this capture is simply bad, and didn't capture that bit of her on any camera...
+- Let's create the `mean-ignorefloor`, `mode` and `mode-ignorefloor` for this capture.
+  - These graphs are much less nice than for the boxes. My guess: part of the problem is the subject (the boxes are more regular than paula) and part of the problem is the positioning and camera angles (the gap in Paul's left side).
