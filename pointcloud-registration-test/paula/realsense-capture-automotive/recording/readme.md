@@ -113,3 +113,21 @@
     python -m cwipc.scripts.cwipc_test_aligner --correspondence 0.0133 --verbose --algorithm_fine RegistrationComputer_ICP_Generalized paula-flooraligned.ply paula-flooraligned-generalized0133.ply
   ```
   Very similar results. Sigh.
+  
+### Use the boxes registration
+
+Let's  a completely different angle. We have the good calibration from `../../../boxes-automotive-realsense/recording`. Tried it with recording2 first, and that showed that we can probably determine that we have a bad registration due to a bad capture. Let's try with this capture too and see.
+
+
+- First we copy the floor-aligned cameraconfig (also to `cameraconfig-02.json`) and capture `02-paula-with-aligned-floor.ply`.
+- Analyze alignment for `mean`, both with floor and with `--ignorefloor`.
+  - Results are different shape as for the boxes. Camera 8 and 4 have a distinct peak, then a lower plateau, then dropping. Camera 1 and 2 have a `5cm` amorphous plateau.
+  - Also different shaped as for `recording2`: I don't see the mean/mode thing here.
+  - Note that the max correspondence value that worked well for the boxes `0.034` (being the worst `mean+stddev`) cannot be gleamed from these plots. That number, for this plot, would be `0.048`.
+- Now we copy the fully aligned cameraconfig (and also to `cameraconfig-03.json`) and capture `03-paula-boxregistration.ply`
+  - Interesting... Gaps in Paula's side. Most conspicuously on her right, but also a little on her left....
+  - Let's compare to the ground-truth-aligned `paula-flooraligned-miracoaligned.ply`. Did we overlook this?
+  - Hmm. Somwhat. New paula has a large gap on her right, small gap on her left. Ground-truth-aligned has a small gap on her left leg.
+
+- Let's create the `mean-ignorefloor`, `mode` and `mode-ignorefloor` for this capture.
+  - These graphs are much  less nice than for the boxes. My guess: part of the problem is the subject (the boxes are more regular than paula) and part of the problem is the positioning and camera angles (the gap in Paul's left side).
