@@ -38,5 +38,12 @@
   There is a gap on her left.
 - Tried various things to get rid of the gap (like upping the correspondence, or repeating the ground-truth registration). Nothing worked. Maybe I accidntally moved paula's arm, so the ground truth isn't an actual ground truth?
 
+### Use the boxes registration
 
+Let's  a completely different angle. We have the good calibration from `../../../boxes-automotive-realsense/recording`.
+
+- First we copy the floor-aligned cameraconfig (also to cameraconfig-01.json`) and capture `02-paula-with-aligned-floor.ply`.
+- Analyze alignment for `mean`, both with floor and with `--ignorefloor`.
+  - Results are similarly-shaped as for the boxes.
+  - I have the impression (_need to verify_) that for most tiles it holds that `mode < mean-stddev`. Maybe not for camera 1, but it has a very large `mean`, and also its `mode` is the "second peak". We may be able to detect this.
 
