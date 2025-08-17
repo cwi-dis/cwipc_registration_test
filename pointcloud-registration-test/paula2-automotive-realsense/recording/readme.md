@@ -38,5 +38,7 @@ Captured paula with 5fps, all preprocessing turned off.
   - Retry with `0`. Exactly the same problem.
   - Give up.
   
-  
+### See if we can do a partial registration
 
+- Back to `02-cameraconfig.json` And `02-paula-flooraligned.ply`.
+- Inspect the colored capture pointcloud. Camera `0` and `1` look like they may have a chance at success.
