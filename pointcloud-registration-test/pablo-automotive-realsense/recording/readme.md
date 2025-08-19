@@ -8,4 +8,4 @@ Used this capture anyway to test cwipc_register floor alignment.
 
 Proceeded with using this capture with `cwipc_register --guided`, selecting various viewpoints and algorithms.
 
-Got as far as 
+Got as far as `01-cameraconfig.json`, but I have the feeling we can do better.
