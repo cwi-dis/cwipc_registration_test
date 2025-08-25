@@ -165,7 +165,7 @@
   },
   "sync": {
     "sync_master_serial": "215122252639",
-    "sync_mode": 3
+    "sync_mode": 2
   },
   "system": {
     "debug": false,
