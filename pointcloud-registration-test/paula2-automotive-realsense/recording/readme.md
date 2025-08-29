@@ -41,4 +41,4 @@ Captured paula with 5fps, all preprocessing turned off.
 ### See if we can do a partial registration
 
 - Back to `02-cameraconfig.json` And `02-paula-flooraligned.ply`.
-- Inspect the colored capture pointcloud. Camera `0` and `1` look like they may have a chance at success.
+- Inspect the colored capture pointcloud. Camera `4` and `2` look like they may have a chance at success.
